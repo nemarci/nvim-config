@@ -1,0 +1,10 @@
+require("plugins")
+
+require("mn.lsp")
+require("mn.rust")
+require("mn.options")
+require("mn.mappings")
+require("mn.completion")
+require("mn.snip")
+require("mn.telescope")
+require("mn.debugger")
