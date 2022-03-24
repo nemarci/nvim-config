@@ -50,5 +50,8 @@ return require('packer').startup(function()
   -- use {'nvim-treesitter/nvim-treesitter'}
   -- use {'nvim-lua/plenary.nvim'} -- dependency for telescope
 
+  -- Git
+  use { "tpope/vim-fugitive" }
+
   end
 )
