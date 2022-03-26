@@ -53,5 +53,8 @@ return require('packer').startup(function()
   -- Git
   use { "tpope/vim-fugitive" }
 
+  -- Statusline
+  use { 'feline-nvim/feline.nvim' }
+
   end
 )
