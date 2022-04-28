@@ -32,9 +32,11 @@ vim.keymap.set('n', 'g]', vim.diagnostic.goto_next, {})
 
 
 vim.keymap.set('n', "<leader>o", "<cmd>Telescope find_files<CR>", {})
-vim.keymap.set('n', "<leader>f", "<cmd>Telescope live_grep<CR>", {})
+vim.keymap.set('n', "<leader>g", "<cmd>Telescope live_grep<CR>", {})
+vim.keymap.set('n', "<leader>f", "<cmd>Telescope file_browser<CR>", {})
 vim.keymap.set('n', "<leader>b", "<cmd>Telescope buffers<CR>", {})
 vim.keymap.set('n', "<leader>d", "<cmd>Telescope diagnostics<CR>", {})
+vim.keymap.set('n', "<leader>h", "<cmd>Telescope help_tags<CR>", {})
 
 -- Just for testing
 -- vim.keymap.set('n', '<leader>b', function() print("foo"); end, {})
