@@ -55,7 +55,7 @@ return require('packer').startup(function()
   use { "lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"} }
 
   -- Statusline
-  use { 'feline-nvim/feline.nvim' }
+  use { 'feline-nvim/feline.nvim', requires = {"kyazdani42/nvim-web-devicons" }}
 
   end
 )
