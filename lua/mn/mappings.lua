@@ -1,12 +1,11 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = "-"
 
-vim.keymap.set('n', '<leader>t', require("rust-tools.inlay_hints").toggle_inlay_hints, {})
+vim.keymap.set('n', '<leader>i', require("rust-tools.inlay_hints").toggle_inlay_hints, {})
 vim.keymap.set('n', '<leader>e', require("rust-tools.expand_macro").expand_macro, {})
 
 -- Code navigation shortcuts
 -- as found in :help lsp
-vim.keymap.set('n', '<c-]>', vim.lsp.buf.definition, {})
 vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 vim.keymap.set('n', 'gD', vim.lsp.buf.implementation, {})
 vim.keymap.set('n', '<c-k>', vim.lsp.buf.signature_help, {})
@@ -30,13 +29,13 @@ vim.keymap.set('n', 'g]', vim.diagnostic.goto_next, {})
 
 -- Telescope mappings
 
-
-vim.keymap.set('n', "<leader>o", "<cmd>Telescope find_files<CR>", {})
-vim.keymap.set('n', "<leader>g", "<cmd>Telescope live_grep<CR>", {})
-vim.keymap.set('n', "<leader>f", "<cmd>Telescope file_browser<CR>", {})
-vim.keymap.set('n', "<leader>b", "<cmd>Telescope buffers<CR>", {})
-vim.keymap.set('n', "<leader>d", "<cmd>Telescope diagnostics<CR>", {})
-vim.keymap.set('n', "<leader>h", "<cmd>Telescope help_tags<CR>", {})
+vim.keymap.set('n', "<leader>tt", "<cmd>Telescope<CR>", {})
+vim.keymap.set('n', "<leader>to", "<cmd>Telescope find_files<CR>", {})
+vim.keymap.set('n', "<leader>tg", "<cmd>Telescope live_grep<CR>", {})
+vim.keymap.set('n', "<leader>tf", "<cmd>Telescope file_browser<CR>", {})
+vim.keymap.set('n', "<leader>tb", "<cmd>Telescope buffers<CR>", {})
+vim.keymap.set('n', "<leader>td", "<cmd>Telescope diagnostics<CR>", {})
+vim.keymap.set('n', "<leader>th", "<cmd>Telescope help_tags<CR>", {})
 
 -- Just for testing
 -- vim.keymap.set('n', '<leader>b', function() print("foo"); end, {})
