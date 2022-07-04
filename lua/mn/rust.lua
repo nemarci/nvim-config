@@ -82,7 +82,7 @@ local group = vim.api.nvim_create_augroup("rustfmt", {clear = true})
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.rs",
     callback = function()
-        vim.lsp.buf.formatting_sync(nil, 1000)
+        vim.lsp.buf.format(nil)
     end,
     group = group,
 })
