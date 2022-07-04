@@ -14,7 +14,12 @@ return require('packer').startup(function()
   use {'saadparwaiz1/cmp_luasnip', requires = {'hrsh7th/nvim-cmp'}}
 
   -- Colorschemes
-  use {'morhetz/gruvbox'}
+  -- use {'morhetz/gruvbox'}
+  -- use this instead of the original by morhetz, because of Treesitter support
+  use { "ellisonleao/gruvbox.nvim" }
+  use { "lunarvim/darkplus.nvim" }
+  use { "sainnhe/sonokai" }
+  use { "sainnhe/gruvbox-material" }
 
   -- LSP configuration
   use {'neovim/nvim-lspconfig'}
