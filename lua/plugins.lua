@@ -57,5 +57,11 @@ return require('packer').startup(function()
   -- Statusline
   use { 'feline-nvim/feline.nvim', requires = {"kyazdani42/nvim-web-devicons" }}
 
+  -- Treesitter
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'nvim-treesitter/playground'}
+  use {'nvim-treesitter/nvim-treesitter-context'}
+  -- use {'p00f/nvim-ts-rainbow', requires = {'nvim-treesitter/nvim-treesitter'}}
+
   end
 )
