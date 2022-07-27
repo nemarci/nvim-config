@@ -44,3 +44,5 @@ vim.keymap.set('n', "gL", "<cmd>BufferLineMoveNext<CR>", {})
 vim.keymap.set('n', "gH", "<cmd>BufferLineMovePrev<CR>", {})
 vim.keymap.set('n', "gb", "<cmd>BufferLinePick<CR>", {})
 
+-- Source vimrc without restarting Neovim
+vim.keymap.set('n', "<leader>s", "<cmd>source $MYVIMRC<CR>", {})
