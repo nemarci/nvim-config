@@ -37,5 +37,10 @@ vim.keymap.set('n', "<leader>tb", "<cmd>Telescope buffers<CR>", {})
 vim.keymap.set('n', "<leader>td", "<cmd>Telescope diagnostics<CR>", {})
 vim.keymap.set('n', "<leader>th", "<cmd>Telescope help_tags<CR>", {})
 
--- Just for testing
--- vim.keymap.set('n', '<leader>b', function() print("foo"); end, {})
+-- Buffer navigation
+vim.keymap.set('n', "gl", "<cmd>BufferLineCycleNext<CR>", {})
+vim.keymap.set('n', "gh", "<cmd>BufferLineCyclePrev<CR>", {})
+vim.keymap.set('n', "gL", "<cmd>BufferLineMoveNext<CR>", {})
+vim.keymap.set('n', "gH", "<cmd>BufferLineMovePrev<CR>", {})
+vim.keymap.set('n', "gb", "<cmd>BufferLinePick<CR>", {})
+

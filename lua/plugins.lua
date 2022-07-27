@@ -70,5 +70,6 @@ return require('packer').startup(function()
 
   use {'phaazon/hop.nvim'}
 
+  use {'akinsho/bufferline.nvim'}
   end
 )
