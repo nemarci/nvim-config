@@ -68,5 +68,7 @@ return require('packer').startup(function()
   use {'nvim-treesitter/nvim-treesitter-context'}
   -- use {'p00f/nvim-ts-rainbow', requires = {'nvim-treesitter/nvim-treesitter'}}
 
+  use {'phaazon/hop.nvim'}
+
   end
 )
