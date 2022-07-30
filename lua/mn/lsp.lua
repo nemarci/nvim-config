@@ -7,8 +7,31 @@ local servers = { "ccls", "gopls", "texlab", "kotlin_language_server" }
 for _, lsp in ipairs(servers) do
   -- nvim_lsp[lsp].setup { capabilities = capabilities, on_attach = on_attach }
   -- do not turn on auto completion here, since it is turned on globally
-  nvim_lsp[lsp].setup { capabilities = capabilities }
+  nvim_lsp[lsp].setup{}
 end
+
+nvim_lsp["sumneko_lua"].setup{ settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+        --path = runtime_path,
+      },
+      completion = {
+        callSnippet = 'Replace',
+      },
+      diagnostics = {
+        enable = true,
+        globals = {'vim', 'use'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file('', true),
+        maxPreload = 10000,
+        preloadFileSize = 10000,
+      },
+      telemetry = {enable = false},
+    },
+  }
+}
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
