@@ -1,7 +1,7 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+  PACKER_BOOTSTRAP = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -54,7 +54,7 @@ return require('packer').startup(function()
   use {'mfussenegger/nvim-dap'}
   -- Debugger UI
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-  
+
   -- Maybe needed?
   -- use {'folke/lsp-colors.nvim'}
   -- use {'nvim-lua/lsp_extensions.nvim'}
@@ -80,7 +80,7 @@ return require('packer').startup(function()
 
   use { "williamboman/mason.nvim" }
 
-  if packer_boostrap then
+  if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
 end)
