@@ -77,6 +77,9 @@ return require('packer').startup(function()
   use {'phaazon/hop.nvim'}
 
   use {'akinsho/bufferline.nvim'}
+
+  use { "williamboman/mason.nvim" }
+
   if packer_boostrap then
     require('packer').sync()
   end
