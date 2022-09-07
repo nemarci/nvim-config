@@ -43,6 +43,8 @@ vim.keymap.set('n', "gh", "<cmd>BufferLineCyclePrev<CR>", {})
 vim.keymap.set('n', "gL", "<cmd>BufferLineMoveNext<CR>", {})
 vim.keymap.set('n', "gH", "<cmd>BufferLineMovePrev<CR>", {})
 vim.keymap.set('n', "gb", "<cmd>BufferLinePick<CR>", {})
-
+vim.keymap.set('n', "gch", "<cmd>BufferLineCloseLeft<CR>", {})
+vim.keymap.set('n', "gcl", "<cmd>BufferLineCloseRight<CR>", {})
+vim.keymap.set('n', "gcc", require("mn.bufferline").close_all_other, {})
 -- Source vimrc without restarting Neovim
 vim.keymap.set('n', "<leader>s", "<cmd>source $MYVIMRC<CR>", {})
