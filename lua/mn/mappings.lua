@@ -1,7 +1,8 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = "-"
 
-vim.keymap.set('n', '<leader>i', require("rust-tools.inlay_hints").toggle_inlay_hints, {})
+vim.keymap.set('n', '<leader>i', require("rust-tools.inlay_hints").enable, {})
+vim.keymap.set('n', '<leader>I', require("rust-tools.inlay_hints").disable, {})
 vim.keymap.set('n', '<leader>e', require("rust-tools.expand_macro").expand_macro, {})
 
 -- Code navigation shortcuts
