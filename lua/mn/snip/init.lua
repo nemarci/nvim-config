@@ -28,3 +28,4 @@ end)
 
 vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
 
+require("mn.snip.snippets")
