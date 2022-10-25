@@ -37,6 +37,8 @@ vim.keymap.set('n', "<leader>tf", "<cmd>Telescope file_browser<CR>", {})
 vim.keymap.set('n', "<leader>tb", "<cmd>Telescope buffers<CR>", {})
 vim.keymap.set('n', "<leader>td", "<cmd>Telescope diagnostics<CR>", {})
 vim.keymap.set('n', "<leader>th", "<cmd>Telescope help_tags<CR>", {})
+vim.keymap.set('n', "<leader>tr", "<cmd>Telescope lsp_references<CR>", {})
+vim.keymap.set('n', "<leader>ts", "<cmd>Telescope lsp_workspace_symbols<CR>", {})
 
 -- Buffer navigation
 vim.keymap.set('n', "gl", "<cmd>BufferLineCycleNext<CR>", {})
