@@ -158,6 +158,28 @@ require('lazy').setup({
   -- snippets
   'honza/vim-snippets',
 
+  -- Disable some expensive features for big files
+  -- Big files are  probably not source code, but just some plaintext logs, which gain little from using treesitter, syntax highlighting, etc.
+  {
+    'LunarVim/bigfile.nvim',
+    config = function()
+        require("bigfile").config {
+          filesize = 10,     -- size of the file in MiB, the plugin round file sizes to the closest MiB
+          pattern = { "*" }, -- autocmd pattern
+          features = {       -- features to disable
+            "indent_blankline",
+            "lsp",
+            "treesitter",
+            "syntax",
+            "matchparen",
+            "vimopts",
+            "filetype",
+          },
+        }
+    end,
+  },
+
+
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
   --    up-to-date with whatever is in the kickstart repo.
