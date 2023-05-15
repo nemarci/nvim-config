@@ -10,6 +10,7 @@ require("mn.telescope")
 require("mn.treesitter")
 require("mn.lsp")
 require("mn.completion")
+require("mn.snippets")
 require("mn.rust")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
