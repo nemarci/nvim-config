@@ -4,6 +4,7 @@ vim.g.mapleader = ','
 vim.g.maplocalleader = ' '
 
 require("mn.plugins")
+require("mn.keymaps")
 require("mn.options")
 require("mn.misc")
 require("mn.telescope")
