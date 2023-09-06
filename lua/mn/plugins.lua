@@ -38,7 +38,6 @@ require('lazy').setup({
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -57,13 +56,11 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
   },
-
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
   },
-
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim',          opts = {} },
   {
@@ -80,7 +77,6 @@ require('lazy').setup({
       },
     },
   },
-
   {
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
@@ -89,7 +85,6 @@ require('lazy').setup({
       vim.cmd.colorscheme 'onedark'
     end,
   },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -103,7 +98,6 @@ require('lazy').setup({
       },
     },
   },
-
   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
@@ -119,13 +113,10 @@ require('lazy').setup({
       use_treesitter = true,
     },
   },
-
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim',         opts = {} },
-
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
-
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
@@ -138,10 +129,8 @@ require('lazy').setup({
       return vim.fn.executable 'make' == 1
     end,
   },
-
   'nvim-telescope/telescope-file-browser.nvim',
   'nvim-telescope/telescope-ui-select.nvim',
-
   {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
@@ -154,29 +143,26 @@ require('lazy').setup({
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
-
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   require 'kickstart.plugins.autoformat',
-  require 'kickstart.plugins.debug',
+  -- require 'kickstart.plugins.debug',
 
   'mbbill/undotree',
   'kyazdani42/nvim-web-devicons',
   'simrat39/rust-tools.nvim',
-
   -- snippets
   'honza/vim-snippets',
-
   -- Disable some expensive features for big files
   -- Big files are  probably not source code, but just some plaintext logs, which gain little from using treesitter, syntax highlighting, etc.
   {
     'LunarVim/bigfile.nvim',
     config = function()
       require("bigfile").config {
-        filesize = 10,       -- size of the file in MiB, the plugin round file sizes to the closest MiB
-        pattern = { "*" },   -- autocmd pattern
-        features = {         -- features to disable
+        filesize = 10,     -- size of the file in MiB, the plugin round file sizes to the closest MiB
+        pattern = { "*" }, -- autocmd pattern
+        features = {       -- features to disable
           "indent_blankline",
           "lsp",
           "treesitter",
@@ -188,8 +174,6 @@ require('lazy').setup({
       }
     end,
   },
-
-
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
   --    up-to-date with whatever is in the kickstart repo.
