@@ -23,8 +23,18 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
+  {
+    'NeogitOrg/neogit',
+    dependencies = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' },
+    config = function()
+      require('neogit').setup {
+        integrations = {
+          telescope = true,
+          diffview = true,
+        }
+      }
+    end,
+  },
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
