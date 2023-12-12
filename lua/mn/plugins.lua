@@ -103,14 +103,14 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    main = "ibl",
     opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-      -- NOTE: I just wanted to pick some distinct colors that fit into the colorscheme; there is no particular reason
-      -- why I picked these, in that order.
-      char_highlight_list = { 'Statement', 'Function', 'String', 'Macro', 'Type' },
-      max_indent_increase = 1,
-      use_treesitter = true,
+      indent = {
+        char = '┊',
+        -- NOTE: I just wanted to pick some distinct colors that fit into the colorscheme; there is no particular reason
+        -- why I picked these, in that order.
+        highlight = { 'Statement', 'Function', 'String', 'Macro', 'Type' }
+      },
     },
   },
   -- "gc" to comment visual regions/lines
