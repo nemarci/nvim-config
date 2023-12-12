@@ -9,7 +9,7 @@ local servers = {
   -- clangd = {},
   -- gopls = {},
   pyright = {},
-  rust_analyzer = {},
+  -- rust_analyzer = {},  -- rust_analyzer is managed by rustup; this ensures that it's getting updated with the compiler
   -- tsserver = {},
 
   lua_ls = {
@@ -37,7 +37,6 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
-    print("Mason setting up LSP for server", server_name)
     require('lspconfig')[server_name].setup {
       capabilities = defaults.capabilities,
       on_attach = defaults.on_attach,
