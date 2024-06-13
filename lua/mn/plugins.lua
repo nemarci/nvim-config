@@ -148,6 +148,19 @@ require('lazy').setup({
   'mbbill/undotree',
   'kyazdani42/nvim-web-devicons',
   'simrat39/rust-tools.nvim',
+  {
+    'saecki/crates.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('crates').setup {
+        completion = {
+          cmp = {
+            enabled = true,
+          }
+        }
+      }
+    end,
+  },
   -- snippets
   'honza/vim-snippets',
   -- Disable some expensive features for big files

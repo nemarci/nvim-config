@@ -11,7 +11,7 @@ local servers = {
   pyright = {},
   -- rust_analyzer = {},  -- rust_analyzer is managed by rustup; this ensures that it's getting updated with the compiler
   -- tsserver = {},
-
+  typst_lsp = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
