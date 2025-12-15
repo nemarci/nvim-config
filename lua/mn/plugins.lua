@@ -46,7 +46,6 @@ require('lazy').setup({
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
       'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -133,7 +132,7 @@ require('lazy').setup({
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
       'nvim-treesitter/nvim-treesitter-context',
-      'p00f/nvim-ts-rainbow',
+      -- 'p00f/nvim-ts-rainbow',
     },
     config = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
@@ -147,17 +146,16 @@ require('lazy').setup({
 
   'mbbill/undotree',
   'kyazdani42/nvim-web-devicons',
-  'simrat39/rust-tools.nvim',
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^6',
+    lazy = false,
+  },
   {
     'saecki/crates.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       require('crates').setup {
-        completion = {
-          cmp = {
-            enabled = true,
-          }
-        }
       }
     end,
   },
